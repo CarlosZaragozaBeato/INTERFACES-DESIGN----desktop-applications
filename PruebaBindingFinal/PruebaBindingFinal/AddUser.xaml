@@ -1,0 +1,71 @@
+﻿<Window x:Class="PruebaBindingFinal.AddUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PruebaBindingFinal"
+        mc:Ignorable="d"
+        Title="AddUser" Height="450" Width="800">
+
+
+    <Window.Resources>
+
+
+        <Style TargetType="TextBox" x:Key="NewParametros">
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Background" Value="#F7F7F7"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Foreground" Value="#393E46"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Width" Value="500"/>
+        
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="Foreground" Value="#F7F7F7"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+
+        <Style TargetType="Button">
+
+            <Setter Property="Background" Value="#F7F7F7"/>
+            <Setter Property="Foreground" Value="#393E46"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Margin" Value="100 10"/>
+        </Style>
+
+
+
+
+    </Window.Resources>
+
+
+
+
+    <Grid VerticalAlignment="Top" Background="#393E46" Height="440" Margin="0,0,2,-21" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110*"/>
+            <RowDefinition Height="110*"/>
+            <RowDefinition Height="110*"/>
+            <RowDefinition Height="71*"/>
+            <RowDefinition Height="40*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBox Style="{StaticResource NewParametros}" x:Name="newName"  Grid.Row="0"/>
+        <TextBox Style="{StaticResource NewParametros}" x:Name="newAge"  Grid.Row="1"/>
+        <TextBox Style="{StaticResource NewParametros}" x:Name="newMail" Grid.Row="2"/>
+
+        <Label Content="User: " Grid.Row="0"/>
+        <Label Content="Age: " Grid.Row="1" />
+        <Label Content="Email: " Grid.Row="2" />
+
+        <Button x:Name="btnCrear" Content="Crear" Grid.Row="3" Click="btnCrearClick"/>
+    </Grid>
+
+</Window>
